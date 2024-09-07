@@ -7,6 +7,7 @@ import { useFormatter, useNow } from "next-intl";
 import PrayCard from "@/Components/PrayCard/PrayCard";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import Loading from "../loading";
 
 function Home() {
   const format = useFormatter();
@@ -22,6 +23,7 @@ function Home() {
     minutes: "",
   });
   const [NewtPrayName, SetNewtPrayName] = useState();
+  const [IsLoading, SetLoading] = useState(false);
 
   // For changing language  inti library
   const ChangeLanguage = (lang) => {
@@ -51,6 +53,7 @@ function Home() {
   useEffect(() => {
     const GetAdhan = async () => {
       try {
+        SetLoading(true);
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(async (e) => {
             const res = await axios.get(
@@ -58,6 +61,7 @@ function Home() {
             );
             SetAdhan(res.data.data);
             GetNextPray(res.data.data);
+            SetLoading(false);
           });
         }
       } catch (err) {}
@@ -104,7 +108,9 @@ function Home() {
       GetNextPray(Adhan);
     }, 6000);
 
-  return (
+  return IsLoading ? (
+    <Loading />
+  ) : (
     <div className="PrayingHomePage" dir={localActive === "ar" ? "rtl" : "ltr"}>
       <div className="container">
         {Adhan && (
