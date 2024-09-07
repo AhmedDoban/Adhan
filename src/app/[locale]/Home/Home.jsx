@@ -54,7 +54,7 @@ function Home() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(async (e) => {
             const res = await axios.get(
-              `http://api.aladhan.com/v1/timings?latitude=${e.coords.latitude}&longitude=${e.coords.longitude}&method=2`
+              `https://api.aladhan.com/v1/timings?latitude=${e.coords.latitude}&longitude=${e.coords.longitude}&method=2`
             );
             SetAdhan(res.data.data);
             GetNextPray(res.data.data);
