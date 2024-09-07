@@ -1,0 +1,18 @@
+{
+  "Loadig": {
+    "Title": "Adhan"
+  },
+  "Home": {
+    "Gregorian": "Gregorian",
+    "Hijri": "Hijri",
+    "Asr": "El-Asr",
+    "Dhuhr": "El-Dhuhr",
+    "Fajr": "El-Fajr",
+    "Isha": "El-Isha",
+    "Maghrib": "El-Maghrib",
+    "Hour": "Hour",
+    "Minute": "Minute",
+    "NextPray": "The next prayer is ",
+    "After": "after "
+  }
+}

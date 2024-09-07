@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default function page() {
+function notFound() {
   return redirect("/ar");
 }
+export default notFound;

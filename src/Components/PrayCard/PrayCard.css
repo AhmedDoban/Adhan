@@ -1,0 +1,18 @@
+.PrayCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+  transition: var(--main-transition);
+}
+.PrayCard.active {
+  background-color: #13a103;
+  color: #fff;
+}

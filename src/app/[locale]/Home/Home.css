@@ -1,0 +1,82 @@
+.PrayingHomePage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../../../public/AdhanLoading.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.PrayingHomePage .container {
+  position: relative;
+  min-height: 100vh;
+}
+.PrayingHomePage .container .PrayingContent {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  align-items: center;
+}
+@media (max-width: 776px) {
+  .PrayingHomePage .PrayingContent {
+    flex-direction: column;
+  }
+}
+.PrayingHomePage .PrayingContent .right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.PrayingHomePage .PrayingContent .right .TittlLogo {
+  position: relative;
+  font-family: Orbitron;
+  font-size: 40px;
+}
+.PrayingHomePage .PrayingContent .right .TittlLogo.ar {
+  font-family: PreLoader;
+  letter-spacing: 3px;
+  font-size: 100px;
+}
+.PrayingHomePage .PrayingContent .right .timeZone {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.PrayingHomePage .PrayingContent .right .clock {
+  position: relative;
+  font-family: Orbitron;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.PrayingHomePage .PrayingContent .right .Remaining {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.PrayingHomePage .PrayingContent .left {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+@media (max-width: 776px) {
+  .PrayingHomePage .PrayingContent .left {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+.PrayingHomePage .PrayingContent .lan {
+  position: relative;
+  color: #13a103;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
